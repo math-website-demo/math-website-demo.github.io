@@ -1,0 +1,15 @@
+{
+  "K": ["Contar", "Formas", "Patrones"],
+  "1": ["Suma", "Resta", "Valor posicional"],
+  "2": ["Multiplicación", "División", "Fracciones"],
+  "3": ["Geometría", "Medición", "Datos"],
+  "4": ["Decimales", "Factores", "Ángulos"],
+  "5": ["Razones", "Porcentajes", "Área"],
+  "6": ["Enteros", "Ecuaciones", "Estadística"],
+  "7": ["Álgebra básica", "Probabilidad", "Círculos"],
+  "8": ["Funciones lineales", "Pitágoras", "Volumen"],
+  "9": ["Ecuaciones cuadráticas", "Trigonometría", "Vectores"],
+  "10": ["Logaritmos", "Números complejos", "Matrices"],
+  "11": ["Introducción al cálculo", "Derivadas", "Integrales"],
+  "12": ["Distribuciones de probabilidad", "Límites", "Series"]
+}

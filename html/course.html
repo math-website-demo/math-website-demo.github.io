@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eulera – Course Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/course.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation (same as landing) -->
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="material-icons">water_drop</span>
+                <span>Eulera</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html" class="active">Courses</a></li>
+                <li><a href="#" class="coming-soon">Practice</a></li>
+                <li><a href="#" class="coming-soon">Games</a></li>
+            </ul>
+            <div class="lang-selector">
+                <select id="langSelect">
+                    <option value="en_us">English (US)</option>
+                    <option value="ar_eg">العربية (مصر)</option>
+                    <option value="es_es">Español (España)</option>
+                </select>
+            </div>
+        </nav>
+
+        <!-- Page header -->
+        <section class="page-header">
+            <h1>Course catalog</h1>
+            <p>Choose your grade and explore the curriculum sections.</p>
+        </section>
+
+        <!-- Grade cards container -->
+        <div id="gradesContainer" class="grades-grid">
+            <!-- Cards will be injected here -->
+            <div class="loading">Loading courses...</div>
+        </div>
+
+        <footer class="footer">
+            <p>Eulera — math, refreshed. All courses are demo placeholders.</p>
+        </footer>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/course.js"></script>
+</body>
+</html>
